@@ -1,6 +1,6 @@
 <template>
     <div class="flex">
-        <div class="w-1/2  h-screen">
+        <div class="w-1/2  h-screen bg-gradient-to-r from-red-500 to-orange-500">
             <img src="public/personajugando.jpg" alt="">
         </div>
         <div class="w-1/2 h-screen ">
@@ -23,3 +23,24 @@
         </div>
     </div>
 </template>
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { useUserStore } from '@/stores/user';
+export default defineComponent({
+    name: 'LoginView',
+
+    setup() {
+        const userStore = useUserStore();
+
+        return {
+            userStore,
+        };
+    },
+
+    methods: {
+        async onsubmitLogin() {
+            await this.userStore.login();
+        },
+    },
+});
+</script>
