@@ -1,7 +1,7 @@
 <template>
     <div class="flex">
         <div class="w-1/2  h-screen bg-gradient-to-r from-red-500 to-orange-500">
-            <img src="public/personajugando.jpg" alt="">
+            <img src="" alt="">
         </div>
         <div class="w-1/2 h-screen ">
             <form action="">
