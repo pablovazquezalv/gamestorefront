@@ -7,7 +7,7 @@
       <p class="font-sans text-gray-600 text-sm text-center">Explora nuestra amplia selección de videojuegos de acción y vive emocionantes aventuras en mundos virtuales.</p>
     </div>
     <div class="w-60">
-      <img src="gtaimage.jpg" alt="img" class="border-white border-4 w-60">
+      <img src="../../public/gtaimage.jpg" alt="img" class="border-white border-4 w-60">
       <h3 class="font-sans text-center font-semibold text-xl m-1">Videojuegos de Estrategia</h3>
       <p class="font-sans text-gray-600 text-sm text-center">Descubre el mundo de la estrategia en videojuegos y demuestra tus habilidades tácticas en batallas épicas.</p>
     </div>
