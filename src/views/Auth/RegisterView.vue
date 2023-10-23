@@ -21,7 +21,7 @@
           
         </div>
         <div class="w-1/2 bg-black min-h-max">
-            <img src="../../public/adorable-perro-basenji-marron-blanco-sonriendo-dando-maximo-cinco-aislado-blanco.jpg" alt="">
+            <img src="" alt="">
         </div>
     </div>
 </template>
