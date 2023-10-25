@@ -15,10 +15,9 @@
            
             </form>
             <div class="flex justify-center mt-8 mr-36">
-                <a href="" class="text-gray-400">¿Ya tienes cuenta? Inicia Sesion</a>
+                <a class="text-gray-400"><router-link to="/register">¿Ya tienes cuenta? Inicia Sesion</router-link></a>
              </div>
-             
-          
+              
         </div>
         <div class="w-1/2 bg-black min-h-max">
             <img src="" alt="">

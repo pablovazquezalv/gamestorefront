@@ -19,7 +19,7 @@ export const useUserStore = defineStore({
 
         },
         async register() {
-          await axios.post
+          await axios.post('http://localhost:3000/users', this.user)
         }
     }
     })

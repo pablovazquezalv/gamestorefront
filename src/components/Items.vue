@@ -11,10 +11,12 @@
       <h3 class="font-sans text-center font-semibold text-xl m-1">Videojuegos de Estrategia</h3>
       <p class="font-sans text-gray-600 text-sm text-center">Descubre el mundo de la estrategia en videojuegos y demuestra tus habilidades tácticas en batallas épicas.</p>
     </div>
-    <div class="w-60">
+    <div class="w-60 text-center">
       <img src="../../public/reddeadimage.jpg" alt="img" class="border-white border-4 w-60">
+      <button class="h-8 w-16 bg-green-400 ">Añadir</button>
       <h3 class="font-sans text-center font-semibold text-xl m-1">Videojuegos de Aventura</h3>
       <p class="font-sans text-gray-600 text-sm text-center">Embárcate en emocionantes aventuras con nuestros videojuegos de aventura y descubre mundos llenos de misterios y desafíos.</p>
+   
     </div>    
   </div>
 </template>

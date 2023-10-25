@@ -15,7 +15,8 @@
             
             <div>
                 <div class="flex justify-center mt-8 mr-36">
-                    <a href="/register" class="text-gray-400">¿No tienes cuenta? Crea una</a>
+                    
+                    <a class="text-gray-400"><router-link to="/register">¿No tienes cuenta? Crea una</router-link></a>
                  </div>
                  
                 
