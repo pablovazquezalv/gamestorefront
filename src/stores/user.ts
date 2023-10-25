@@ -1,6 +1,6 @@
 import {ref, computed} from 'vue'
 import {defineStore} from 'pinia'
-
+import axios from 'axios';
 export const useUserStore = defineStore({
   id : 'user',
   state: () => {
@@ -9,7 +9,8 @@ export const useUserStore = defineStore({
       user: {
         id: "",
         name: "",
-        email: "",        
+        email: "",
+        password: "",      
       },
     };
     },
@@ -18,6 +19,7 @@ export const useUserStore = defineStore({
 
         },
         async register() {
+          await axios.post
         }
     }
     })
