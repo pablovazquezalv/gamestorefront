@@ -40,7 +40,7 @@ export default defineComponent({
 
     methods: {
         async onsubmitLogin() {
-            await this.userStore.login();
+//            await this.userStore.login();
         },
     },
 });
