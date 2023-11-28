@@ -5,11 +5,14 @@
             <form @submit.prevent="onsubmitRegister">
             <h1 class="text-red-400 font-bold m-10 ml-10 text-xl">REGISTRARSE</h1>
             
-            <input  v-model="userStore.user.name" class=" ml-10 border border-gray-200 h-10 w-3/4" type="text" placeholder=" Email o Usuario">
+            <input  v-model="userStore.user.name" class=" ml-10 border border-gray-200 h-10 w-3/4" type="text" placeholder="  Usuario">
            
-            <input v-model="userStore.user.email" type="password" class="m-10 ml-10 border border-gray-200 h-10 w-3/4" placeholder=" Email">
+            <input v-model="userStore.user.email" type="text" class="m-10 ml-10 border border-gray-200 h-10 w-3/4" placeholder=" Email">
           
             <input v-model="userStore.user.password" class=" ml-10 border border-gray-200 h-10 w-3/4" type="password" placeholder=" Contraseña">
+           
+            <input v-model="userStore.user.phone" class=" ml-10 border border-gray-200 h-10 w-3/4" type="telefono" placeholder=" telefono">
+           
             <br>
             
             <button type="submit" class="rounded bg-red-500 h-10 w-3/4 ml-10 mt-10 text-white">CREAR CUENTA</button>

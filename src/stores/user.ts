@@ -10,16 +10,27 @@ export const useUserStore = defineStore({
         id: "",
         name: "",
         email: "",
-        password: "",      
+        password: "",
+        phone: ""      
       },
     };
     },
     actions: {
-        async login() {
-
-        },
+        
         async register() {
-          await axios.post('http://localhost:3000/users', this.user)
+          // await axios.post('http://192.168.253.57:8000/crearUser', this.user).then((response: any) => {
+          //   console.log(response.data);
+          // )}
+          await axios.post("http://192.168.253.57:8000/api/crearUser", this.user)
+          .then((response: any) => {
+            console.log(response);
+          })
+          .catch((error) => {
+            console.log(error);
+  
+            alert(error);
+          });
+          
         }
     }
     })
