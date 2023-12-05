@@ -21,7 +21,7 @@ export const useUserStore = defineStore({
           // await axios.post('http://192.168.253.57:8000/crearUser', this.user).then((response: any) => {
           //   console.log(response.data);
           // )}
-          await axios.post("http://192.168.253.57:8000/api/crearUser", this.user)
+          await axios.post("http://20.225.79.69/api/crearUser", this.user)
           .then((response: any) => {
             console.log(response);
           })
