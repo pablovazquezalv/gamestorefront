@@ -4,10 +4,10 @@
             <img src="" alt="">
         </div>
         <div class="w-1/2 h-screen ">
-            <form action="">
+            <form @submit.prevent="onsubmitLogin">
             <h1 class="text-red-400 font-bold m-10 ml-10 text-xl">INICIAR SESION</h1>
-            <input class=" ml-10 border border-gray-200 h-10 w-3/4" type="text" placeholder=" Email o Usuario">
-            <input type="password" class="m-10 ml-10 border border-gray-200 h-10 w-3/4" placeholder=" Contraseña">
+            <input v-model="userStore.user.email"  class=" ml-10 border border-gray-200 h-10 w-3/4" type="text" placeholder=" Email o Usuario">
+            <input v-model="userStore.user.password" type="password" class="m-10 ml-10 border border-gray-200 h-10 w-3/4" placeholder=" Contraseña">
           
             <button class="rounded bg-red-500 h-10 w-3/4 ml-10 text-white">ENTRAR</button>
             <br>
@@ -40,7 +40,16 @@ export default defineComponent({
 
     methods: {
         async onsubmitLogin() {
-//            await this.userStore.login();
+            if (this.userStore.user.email == "") {
+                alert("El email no puede estar vacio");
+                return;
+            }else if (this.userStore.user.password == "") {
+                alert("La contraseña no puede estar vacia");
+                return;
+            }else
+            {
+             await this.userStore.login();
+            }
         },
     },
 });

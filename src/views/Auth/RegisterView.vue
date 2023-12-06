@@ -5,13 +5,13 @@
             <form @submit.prevent="onsubmitRegister">
             <h1 class="text-red-400 font-bold m-10 ml-10 text-xl">REGISTRARSE</h1>
             
-            <input  v-model="userStore.user.name" class=" ml-10 border border-gray-200 h-10 w-3/4" type="text" placeholder="  Usuario">
+            <input  v-model="userStore.user.name" class=" mb-5 ml-10 border border-gray-200 h-10 w-3/4" type="text" placeholder="Escribe tu nombre:">
            
-            <input v-model="userStore.user.email" type="text" class="m-10 ml-10 border border-gray-200 h-10 w-3/4" placeholder=" Email">
+            <input v-model="userStore.user.email" type="text" class="mb-5 ml-10 border border-gray-200 h-10 w-3/4" placeholder=" Escribe tu email:">
           
-            <input v-model="userStore.user.password" class=" ml-10 border border-gray-200 h-10 w-3/4" type="password" placeholder=" Contraseña">
+            <input v-model="userStore.user.password" class="mb-5 ml-10 border border-gray-200 h-10 w-3/4" type="password" placeholder="Escribe tu contraseña:">
            
-            <input v-model="userStore.user.phone" class=" ml-10 border border-gray-200 h-10 w-3/4" type="telefono" placeholder=" telefono">
+            <input v-model="userStore.user.phone" class="mb-5 ml-10 border border-gray-200 h-10 w-3/4" type="telefono" placeholder="Escribe tu telefono:">
            
             <br>
             
@@ -19,7 +19,7 @@
            
             </form>
             <div class="flex justify-center mt-8 mr-36">
-                <a class="text-gray-400"><router-link to="/register">¿Ya tienes cuenta? Inicia Sesion</router-link></a>
+                <a class="text-gray-400"><router-link to="/">¿Ya tienes cuenta? Inicia Sesion</router-link></a>
              </div>
               
         </div>
@@ -45,7 +45,24 @@ export default defineComponent({
 
     methods: {
         async onsubmitRegister() {
-            await this.userStore.register();
+            if (this.userStore.user.name == "") {
+                alert("El nombre no puede estar vacio");
+                return;
+            }else if (this.userStore.user.email == "") {
+                alert("El email no puede estar vacio");
+                return;
+            }else if (this.userStore.user.password == "") {
+                alert("La contraseña no puede estar vacia");
+                return;
+            }else if (this.userStore.user.phone == "") {
+                alert("El telefono no puede estar vacio");
+                return;
+            }else{
+             await this.userStore.register().then(() => {
+                this.$router.push('/');
+            });
+            }
+
         },
         
     },
